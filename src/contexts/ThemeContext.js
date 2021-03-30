@@ -1,16 +1,14 @@
 import React, { createContext, useState } from 'react'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import themes from '../themes'
+import { themes } from '../themes'
 
 export const ThemeContext = createContext()
 
 export const ThemeContextProvider = ({ children }) => {
 	const [theme, setTheme] = useState('dark')
 
-	const switchTheme = (theme) => setTheme(theme)
-
 	return (
-		<ThemeContext.Provider value={{ theme, switchTheme }}>
+		<ThemeContext.Provider value={{ theme, setTheme }}>
 			<ThemeProvider theme={themes[theme] ? themes[theme] : themes['dark']}>
 				<GlobalStyle />
 				{children}
@@ -26,11 +24,13 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;    
     font-family: ${({ theme }) => theme.fonts.main};
     line-height: 1.5em;
+    
   }
 
   body {
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
+    transition: all 0.35s linear;
   }
 
   h1 {

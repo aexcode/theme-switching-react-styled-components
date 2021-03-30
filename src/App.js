@@ -1,4 +1,5 @@
 import React from 'react'
+import { ThemeSwitcher } from './components/ThemeSwitcher'
 import { ThemeContextProvider } from './contexts'
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
 				nulla blanditiis tempora excepturi reprehenderit, aspernatur in optio,
 				molestias sit necessitatibus ab.
 			</p>
+			<ThemeSwitcher />
 		</ThemeContextProvider>
 	)
 }
