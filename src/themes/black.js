@@ -1,12 +1,12 @@
 import { fonts } from './shared'
 
-const dark = {
+const black = {
 	colors: {
 		background: '#272823',
-		title: '#b39ddb',
+		accent: '#b39ddb',
 		text: '#fffafa',
 	},
 	fonts,
 }
 
-export default dark
+export default black

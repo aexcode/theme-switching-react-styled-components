@@ -1,27 +1,20 @@
-import dark from './dark'
-import light from './light'
-import magenta from './magenta'
+import black from './black'
+import blue from './blue'
 
 export const themes = {
-	dark,
-	light,
-	magenta,
+	black,
+	blue,
 }
 
 export const themePreviews = [
 	{
-		name: 'dark',
-		background: dark.colors.background,
-		text: dark.colors.text,
+		name: 'black',
+		background: black.colors.background,
+		text: black.colors.text,
 	},
 	{
-		name: 'light',
-		background: light.colors.background,
-		text: light.colors.text,
-	},
-	{
-		name: 'magenta',
-		background: magenta.colors.background,
-		text: magenta.colors.text,
+		name: 'blue',
+		background: blue.colors.background,
+		text: blue.colors.text,
 	},
 ]
